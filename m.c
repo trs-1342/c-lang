@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main()
+int mat()
 {
     float s1, s2, i;
 
@@ -33,4 +33,9 @@ int main()
     {
         printf("hata!"); // ERROR !
     }
+}
+
+int main()
+{
+    mat();
 }
