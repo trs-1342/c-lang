@@ -17,6 +17,10 @@ int main()
 
 	// === === === === === ===
 
+	// !!! WARNING !!!
+
+	// char degisken[n]="deger" // n kadar karakter yeri tut.
+
 	// char kullanirken bu sorunu cikartabilir:
 	// C’de string sonlandırma ('\0') taşması, yani ekranda degerlerin tasimasi bozuk olarak cikti verilmesi.
 	// cozum: 'degisken[]' yani dizi icinde bos birakip kendisi otomatik olarak tamamlar.
@@ -29,13 +33,26 @@ int main()
 	// char ogrenciDogumAyi[10]="Ocak";
 	// char ogrenciDogumGunu[2]="01";
 
-	char ogrenciAdi[]="Halil";
-	char ogrenciSoyadi[]="Hattab Hamso";
-	char ogrenciIli[]="Istanbul";
-	char ogrenciYasi[]="18";
-	char ogrenciDogumYili[]="2007";
-	char ogrenciDogumAyi[]="Ocak";
-	char ogrenciDogumGunu[]="01";
+	// ek olarak 2 tur tanimlama seceneginiz var:
+
+	// 1 )
+		// char ogrenciAdi[]="Halil";
+		// char ogrenciSoyadi[]="Hattab Hamso";
+		// char ogrenciIli[]="Istanbul";
+		// char ogrenciYasi[]="18";
+		// char ogrenciDogumYili[]="2007";
+		// char ogrenciDogumAyi[]="Ocak";
+		// char ogrenciDogumGunu[]="01";
+
+	// 2 )
+		// ikinciyi tavsiye ediyorum.
+	char* ogrenciAdi="Halil";
+	char* ogrenciSoyadi="Hattab Hamso";
+	char* ogrenciIli="Istanbul";
+	char* ogrenciYasi="18";
+	char* ogrenciDogumYili="2007";
+	char* ogrenciDogumAyi="Ocak";
+	char* ogrenciDogumGunu="01";
 
 	printf("\n\n****** Kisi Tanitimi ******\n");
 
