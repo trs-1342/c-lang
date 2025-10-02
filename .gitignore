@@ -1,1 +1,17 @@
 *.exe
+*.o
+*.obj
+*.out
+*.a
+*.so
+*.dll
+*.lib
+/build/
+/bin/
+/dist/
+Debug/
+Release/
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
