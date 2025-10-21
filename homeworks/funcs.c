@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h> // for => exit();
 float toplama(float s1, float s2){
 	return s1+s2;
 }
@@ -26,7 +26,7 @@ int main(){
 	char *i;
 	float s1, s2, res;
 
-	printf("function ile hesap makinesi\n\n=== Menu ===\n\n");
+	printf("\n\nfunction ile hesap makinesi\n\n=== Menu ===\n\n");
 
 	printf("1) toplama +");
 	printf("\n2) cikartma -");
@@ -35,27 +35,27 @@ int main(){
 	printf("\n0) cikis yap");
 
 	printf("\nsecim: ");
-	scanf("%s", &i);
+	scanf("%s", i);
 
-	if(i == '1'){
+	if((*i) == '+'){
 
 		scanf("%f %f", &s1, &s2);
 		res = toplama(s1, s2);
 		printf("\ntoplama: %f", res);
 
-	} else if(i == '2'){
+	} else if((*i) == '-'){
 
 		scanf("%f %f", &s1, &s2);
 		res = cikarma(s1, s2);
 		printf("\ncikarma: %f", res);
 
-	} else if(i == '3'){
+	} else if((*i) == '*'){
 
 		scanf("%f %f", &s1, &s2);
 		res = carpma(s1, s2);
 		printf("\ncarpma: %f", res);
 
-	} else if (i == '4'){
+	} else if ((*i) == '/'){
 
 		scanf("%f %f", &s1, &s2);
 		res = bolme(s1, s2);
@@ -65,9 +65,10 @@ int main(){
 			printf("\nbolme: %f", res);
 		}
 
-	} else if (i == '0'){
+	} else if ((*i) == 'E'){
 
 		printf("exit");
+		exit(0);
 
 	} else {
 		printf("error in if-else blok code: %s", i);
